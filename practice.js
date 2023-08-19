@@ -266,3 +266,30 @@ const mult = (...args) => {
  mult(6,7);
  
  mult(4,5,1,2,3,4);
+
+ //Destructuring
+
+ const person={
+  name:'Mohit',
+  email:'mohit@gmail.com'
+ }
+
+////  const personNamePrint=(personName)=>{
+////   console.log(personName.name)
+////  }
+
+//Object destructuring
+const personNamePrint=({name})=>{
+  console.log(name)
+ }
+ personNamePrint(person)
+
+
+// console.log({name,email}=person) //uncomment below to run
+const {name,email}=person
+ console.log(name,email)
+
+const hobbies=['diving','playing']
+const [hobbie1,hobbie2]=hobbies;
+
+console.log(hobbie2, hobbie1)
