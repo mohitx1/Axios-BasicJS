@@ -147,3 +147,52 @@ class Person {
   const person1 = new Person('John', 'Doe', '7-8-80');
   console.log(person1.getBirthYear());
   
+
+  //classes and inheritance
+
+  class User {
+    static count = 0;
+  
+    constructor(name, email, age) {
+      this.name = name;
+      this.email = email;
+      this.age = age;
+      User.countUser();
+    }
+  
+    static countUser() {
+      User.count++;
+    }
+  
+    static printUserCount() {
+      console.log(`Total users: ${User.count}`);
+    }
+  
+    eligibleOrNot() {
+      if (this.age > 18) {
+        console.log(`${this.name}, you are eligible`);
+      } else {
+        console.log(`${this.name}, you are not eligible`);
+      }
+    }
+  }
+  
+  // let obj1 = new User('Mohit', 'mohit@gmail.com', 28);
+  // obj1.eligibleOrNot();
+  // User.printUserCount();
+  
+  class Member extends User{
+    constructor(name, email, age, memberPackage){
+      super(name, email, age);
+      this.package = memberPackage;
+    }
+  
+    getPackage(){
+      console.log(this.name+' is subscribed to the '+this.package+' package');
+    }
+  }
+  
+  let mike = new Member('mike', 'mike@gmail.com', 24, 'Standard');
+  
+  mike.getPackage();
+  mike.eligibleOrNot();
