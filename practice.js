@@ -65,5 +65,8 @@ const todos = [
 
   const filtertodo=todos.filter((todo)=>{
     return todo.isComplete==true
+  }).map((todo)=>{
+    console.log(todo)
+    return todo.text
   })
   console.log(filtertodo)
