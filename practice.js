@@ -181,6 +181,7 @@ class Person {
   // obj1.eligibleOrNot();
   // User.printUserCount();
   
+  ////*Important
   class Member extends User{
     constructor(name, email, age, memberPackage){
       super(name, email, age);
@@ -196,3 +197,27 @@ class Person {
   
   mike.getPackage();
   mike.eligibleOrNot();
+
+
+  //Date
+
+  const currDate = Date.now();
+  console.log(currDate)
+  const curDate=new Date()
+  console.log(curDate)
+
+  const pastDate=new Date(2015,9,2,45,67,34)
+  const pastNewDate=new Date(2015,9,2,45,67,34)
+  const futDate= new Date(2300,9,2)  //One month later date showing??
+  console.log(pastDate)
+  console.log(futDate)
+  console.log(pastDate.getMonth())
+  console.log(pastDate.getFullYear())
+  console.log(pastDate.getDate())
+  console.log(pastDate.getDay())
+  console.log(pastDate.getHours())
+  //number of milisceonds since 1jan 1970 or second may be
+  console.log(pastDate.getTime())
+
+  console.log(pastDate==pastNewDate);
+  console.log(pastDate.getTime()==pastNewDate.getTime());
