@@ -70,3 +70,21 @@ const todos = [
     return todo.text
   })
   console.log(filtertodo)
+
+
+  const a=11;
+
+  color=a>11?'red':'green';
+//   color='orange'
+console.log(color)
+
+  switch(color){
+    case 'red':
+        console.log('color is red');
+        break
+    case 'green':
+        console.log('color is green')
+        break
+    default:
+        console.log('color is not red or green')
+  }
