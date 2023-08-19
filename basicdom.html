@@ -134,41 +134,6 @@ header {
         //     ul.innerHTML='Hello'
         // })
 
-//         const myform=document.querySelector('#my-form')
-//         const msg=document.querySelector('.msg');
-//         const name=document.querySelector('#name')
-//         // console.log(name.value)
-//         const email=document.querySelector('email')
-//         // const user=document.querySelector('#users')
-//         const userList = document.querySelector('#users');
-
-//         myform.addEventListener('submit',(e)=>{
-//             e.preventDefault();
-
-//             if (name.value==='' || email.value===''){
-//                 msg.classList.add('error')
-//                 msg.innerHTML='fill all credentials'
-//                 setTimeout(() => {
-//                     msg.remove()
-//                 }, 1000);
-//             } else {
-//     // Create new list item with user
-//     const li = document.createElement('li');
-
-//     // Add text node with input values
-//     li.appendChild(document.createTextNode(`${nameInput.value}: ${emailInput.value}`));
-
-//     // Add HTML
-//     // li.innerHTML = `<strong>${nameInput.value}</strong>e: ${emailInput.value}`;
-
-//     // Append to ul
-//     userList.appendChild(li);
-
-//     // Clear fields
-//     name.value = '';
-//     email.value = '';
-//   }
-// })
 // Put DOM elements into variables
 const myForm = document.querySelector('#my-form');
 const nameInput = document.querySelector('#name');
@@ -177,9 +142,7 @@ const msg = document.querySelector('.msg');
 const userList = document.querySelector('#users');
 
 // Listen for form submit
-myForm.addEventListener('submit', onSubmit);
-
-function onSubmit(e) {
+myForm.addEventListener('submit',(e)=> {
   e.preventDefault();
   
   if(nameInput.value === '' || emailInput.value === '') {
@@ -188,7 +151,7 @@ function onSubmit(e) {
     msg.innerHTML = 'Please enter all fields';
 
     // Remove error after 3 seconds
-    setTimeout(() => msg.remove(), 3000);
+    setTimeout(() => msg.remove(), 2000);
   } else {
     // Create new list item with user
     const li = document.createElement('li');
@@ -206,7 +169,7 @@ function onSubmit(e) {
     nameInput.value = '';
     emailInput.value = '';
   }
-}
+})
 
 
     </script>
