@@ -19,7 +19,7 @@ const people={
         district:'ranchi'
     }
 }
-people.phone=09123456789
+people.phone=09123456789;
 //to add something to object
 
 console.log(people.hobbies.indexOf('surfing'))
@@ -221,3 +221,48 @@ class Person {
 
   console.log(pastDate==pastNewDate);
   console.log(pastDate.getTime()==pastNewDate.getTime());
+
+  //slice function to make a copy
+  //spread operator to make copy
+
+  const arra=['hey','how','are','you'];
+  const newArr=arra.slice();
+  const newArra=[...arra];
+  console.log(newArr);
+  console.log(newArra)
+
+  //spread operator also used for objects
+  const obj={
+    name:'Mohit',
+    email:'mohit@gmail.com'
+  }
+  // const newObj=obj.slice(); **slice not used to make copy of objects
+  const newObj={...obj}
+  console.log(newObj)
+
+
+  //used to get multiple arguements from user
+  const argArr=(...args)=>{
+    console.log(args)
+  }
+argArr(1,2,3,4,5,6)
+
+const mult = (...args) => {
+
+  let prod = 1;
+ 
+  for (num of args) {
+ 
+   prod *= num;
+ 
+  }
+ 
+  console.log(prod);
+ 
+ };
+ 
+ 
+ 
+ mult(6,7);
+ 
+ mult(4,5,1,2,3,4);
